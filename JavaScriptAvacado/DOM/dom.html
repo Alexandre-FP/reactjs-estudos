@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+</head>
+<body>
+    <img src="" alt="">
+    <h1 id="nome">Seu nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p>
+        Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas
+        Fullstack.
+    </p>
+<p>
+    Para mais detalhes, por favor, visite meu
+    <a href="https://github.com/Alexandre-FP">GitHub</a>
+</p>
+<script>
+  const nome = document.querySelector("#nome")
+  console.log(nome);
+  nome.innerHTML = "Alexandre"; //alterando um valor de uma tag
+  nome.style.color = "blue"; // modificando a cor do meu obj capturado
+
+  const sub = document.createElement("h2");
+  sub.innerHTML = "Projetos"
+  console.log(sub)
+  document.body.appendChild(sub)// eu acesso o corpo do meu html e o appendchild ele adiciona esse elemneto(tag que eu criei que é h2)
+
+  const lista = document.createElement("ul"); // criei um elemento ul
+  const li = document.createElement("li"); //// criei um elemento li
+
+  li.innerHTML = "Projeto Pessoal"; // alterando um valor de uma tag
+  lista.append(li); // passando o valor de li para lista
+  document.body.append(lista); // assim adicionando a lista(li) para dentro da lista nao ordenada(ul)
+
+   for(let i = 0; i <= 5; i++ ){
+     li.innerHTML = `Projeto Pessoal - ${i}`;
+   }
+
+   
+  console.log(lista);
+</script>
+</body>
+</html>

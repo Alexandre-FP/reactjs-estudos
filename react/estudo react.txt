@@ -1,0 +1,26 @@
+// import { useState } from = "React"; <= forma correta
+const { useState } = React;
+
+const Topic = ({ title, count }) => {
+  const [votes, setVotes] = useState(count);
+  
+     const aperta = () => {
+       setVotes(votes + 1);
+   }
+  
+    return <div>{ title } ({ votes }) <button onClick={ aperta }>+1</button></div>
+}
+
+const App = () => {
+  return (
+    <>
+    <h1>Vota Tópico</h1>
+    <Topic title="Php" count={0}/>
+    <Topic title="JavaScript" count={50}/>
+    <Topic title="Python" count={0}/>
+    </>
+  )
+}
+
+
+ReactDOM.render(<App />, document.getElementById("root"));

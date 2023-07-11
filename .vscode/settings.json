@@ -1,0 +1,34 @@
+{
+    "window.zoomLevel": -1, // torna a janela do editor bem grande
+    "editor.fontSize": 15, // tamanho da fonte
+    "editor.lineHeight": 24, // altura da linha
+    "editor.formatOnSave": true, // formata o arquivo ao salvar
+    "editor.rulers": [80, 120], // tamanho das linhas de quebra
+    "editor.wordWrap": "on", // habilitar por padrão a quebra automática
+    "editor.tabSize": 2, // tamanho do tab em espaços
+    "editor.renderLineHighlight": "gutter", // tipo de destaque de linha
+    "editor.parameterHints.enabled": false, // desabilitar documentação ao passar o mouse
+    "files.eol": "\n", // terminador de linha de arquivos (ideal para quem usa windows)
+    "files.trimTrailingWhitespace": true, // elimina espaços desnecessários no final da linha
+    "files.insertFinalNewline": true, // insere uma nova linha no final do arquivo
+    "files.trimFinalNewlines": true, // remove espaços nas novas linhas finais
+    "files.exclude": { // esconde estas pastas do browser de arquivos
+      "**/node_modules": true
+    },
+    "terminal.integrated.fontFamily": "Menlo for Powerline", // fonte do console
+    "terminal.integrated.fontSize": 16, // tamanho da fonte do console
+    "terminal.integrated.fontWeight": "300", // espessura da fonte no console
+    "workbench.startupEditor": "newUntitledFile", // como o editor inicia (com arquivo em branco)
+    "git.enableSmartCommit": true, // habilita commits inteligentes
+    "git.autofetch": true, // realiza o auto fetch no plugin de git
+    "workbench.iconTheme": "material-icon-theme", // tema de ícones
+    // "workbench.colorTheme": "Material Theme Darker High Contrast", // tema do editor
+    "breadcrumbs.enabled": true, // habilita o caminho de pão no cabeçalho do editor
+    "javascript.updateImportsOnFileMove.enabled": "never", // não atualiza imports
+    "emmet.syntaxProfiles": { // habilita emmet para jsx
+      "javascript": "jsx"
+    },
+    "emmet.includeLanguages": { // habilita react e css no emmet
+      "javascript": ["javascriptreact", "css"]
+    }
+  }

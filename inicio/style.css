@@ -1,0 +1,23 @@
+#container {
+    background-color: rgb(21, 177, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    width: 300px;
+  }
+  
+  .css {
+    margin-bottom: 10px;
+  }
+
+  
+  
+  #enviar {
+    display: block;
+    margin-top: 10px;
+  }
+  

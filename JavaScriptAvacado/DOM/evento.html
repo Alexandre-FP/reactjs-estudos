@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //simplificando esse evendo faz toda o recarregamento do DOM e depois excuta os valores que eu estou tentnado recuperar com javascript
+        document.addEventListener("DOMContentLoaded", (e) => {
+         const h1 = document.querySelector("#title");
+          console.log(h1);
+        })
+        
+
+    </script>
+    <h1 id="title">Minha Pagina</h1>
+</body>
+</html>

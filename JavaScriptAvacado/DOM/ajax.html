@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>Recuperar dados</button>
+    <br>
+    <br>
+    <script>
+        const myFunction = () =>{
+            const xhr = new XMLHttpRequest;
+            
+            xhr.open("GET", "https://api.github.com/users/Alexandre-FP")
+            xhr.send(null);
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState == 4){
+                    const row = JSON.parse(xhr.responseText);
+                    console.log(row);
+                     
+                    const nome = row.name;
+                    const url = row.avatar_url;
+                    const followr = row.followers;
+                    const bio = row.bio;
+                    
+                    const imgel = document.createElement("img");
+                    imgel.setAttribute("src", url);
+                    imgel.setAttribute("width", "128");
+
+                    const nomeel = document.createElement("h1");
+                    console.log(nomeel)
+                    nomeel.innerHTML = nome;
+
+                    const followrsel = document.createElement("p");
+                    followrsel.innerHTML = `Meus Seguidores ${followr}`;
+
+                    const bioel = document.createElement("p");
+                    bioel.innerHTML = bio;
+                    
+                    
+                    
+        
+                    document.body.append(imgel, nomeel, followrsel, bioel);
+                }
+            }
+
+        }
+        const butt =  document.querySelector("button");
+        butt.addEventListener("click", myFunction);
+        </script>
+</body>
+</html>

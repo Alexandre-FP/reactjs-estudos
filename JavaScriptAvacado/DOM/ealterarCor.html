@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ti{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Titula da pagina</h1>
+
+    <button id="color">Alterar cor</button>
+    <script>
+        const titu = document.querySelector("#titulo");
+        const but = document.querySelector("#color");
+
+
+        but.addEventListener("click", () => {
+        //como se fosse uma rray de classes css, posso manipular do jeito que eu bem enteder
+        // titu.classList.add("ti") // se eu quiser apenas add possa fazer dessa forma sem precisar passa pela verificação
+        // if(titu.classList.contains("ti")){ //removendo uma classe caso exista
+        // titu.classList.remove("ti");
+        // }else{
+        // titu.classList.add("ti") //adicionando uma class via js
+        // }
+         titu.classList.toggle("ti") // isso seria um uma verificação rapida, ele liga e desliga class
+         });
+
+         // e todos esse metodos de classlist nao recebe mais de uma class
+
+
+
+
+        // but.addEventListener("click", () => {
+        //     ti.style = "color: blue; font-size: 55px" //alterando o estiloe tamanho ao clicar no botao
+        // });
+    </script>
+</body>
+</html>

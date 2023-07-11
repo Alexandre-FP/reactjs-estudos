@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Executar</button>
+
+    <script>
+      let num1 = 0;
+      function myPromises() {
+        console.log("sync Startd"); // iniciando com o start
+
+        const count = ++num1;
+        new Promise((resolve, reject) => {
+          // passando parametro para minha promise, resolve é quando minha promise ocorre tudo certo e reject quando alguma coisa deu errado
+          //entao os dois console que eu tenho dentro dessa functon na line 13 e 24 vao ser executada
+          //e só depois disso minha função promisse sera executada depois de 3000 ela vai aparecer
+          setTimeout(() => {
+            if (count % 2 == 0) {
+              resolve(count); // posso passa valores para o resolve e caputrar no then
+            } else {
+              reject(count); // para capturar o valor do meu reject é o catch
+            }
+          }, 1000);
+        })
+          .then((value) => {
+            //then quando termina minha promise
+            console.log(`Capturando meu valor ${value}`);
+          })
+          .catch((value) => {
+            // se minha promise der algo errado
+            console.log("assyn error");
+          });
+
+        console.log("sync finished");
+      }
+
+      const button = document.querySelector("button"); // capturando meu button
+      button.addEventListener("click", myPromises); // capturando um evento click e passando minha funcção myPromises para meu evento click
+    </script>
+  </body>
+</html>

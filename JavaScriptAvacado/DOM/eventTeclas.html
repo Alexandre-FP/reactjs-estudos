@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="l"/>
+
+    <script>
+        const input = document.querySelector("input[type=text]"); //normalmente utilizando o keydown
+        input.addEventListener("keydown", (e) => {
+            console.log(`e, ${e.key} - ${e.keyCode}`); 
+        //ese consoel.log ele mostra para mim as teclas de baixo dos panos, primeiro ele me mostra a tecla digitado depois o valor dela
+
+            if(event.keyCode === 13){
+               alert(`Tecla Enter Pressionada ${input.value}`); // ele me retorno o numero que fica armezando da tela ENTER
+            }
+        })
+
+        // input.addEventListener("keyup", (e) => {
+        //     console.log("keyup");
+        // })
+
+        // console.log(input);
+    </script>
+</body>
+</html>

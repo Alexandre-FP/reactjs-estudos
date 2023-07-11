@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Executar</button>
+
+    <script>
+   
+      function myPromises() {
+        console.log("sync Startd"); // iniciando com o start
+
+
+        const p1 = new Promise((resolve, reject) => {
+          
+          setTimeout(() => {
+            resolve(1);
+          }, 1000);
+        })
+        const p2 = new Promise((resolve, reject) => {
+        
+          setTimeout(() => {
+            // resolve(2);
+            reject(2)
+          }, 2000);
+        })
+        const p3 = new Promise((resolve, reject) => {
+          
+          setTimeout(() => {
+            resolve(3);
+          }, 3000);
+        })
+        
+        Promise.all([p1, p2, p3]).then((value) => {
+            console.log(`valores das minha Promises ${value}`);
+        })
+        .catch(() =>{
+            console.log("Algo deu errado");
+        })
+        console.log("sync finished");
+      }
+
+      const button = document.querySelector("button"); // capturando meu button
+      button.addEventListener("click", myPromises); // capturando um evento click e passando minha funcção myPromises para meu evento click
+    </script>
+  </body>
+</html>

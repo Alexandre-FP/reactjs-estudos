@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.google.com/search" method="get" id="for">
+        <label for="q">Busca</label>
+        <input type="text" name="q" id="busca">
+
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <script>
+        const busc = document.querySelector("#for");
+
+        busc.addEventListener("submit", (e) => {
+            const queryValue = e.target.querySelector("#busca[name=q]").value
+        
+           if(!queryValue){ // ! == verificando se o meu campo é vazio ou não
+             e.preventDefault() // e aqui ele faz com que e o evento nao ocorra caso meu campo estiver vazio
+              alert("Esse campo é obrigatorio");
+           }
+        });
+    </script>
+</body>
+ 
+
+</html>

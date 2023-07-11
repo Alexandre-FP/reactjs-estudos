@@ -1,0 +1,30 @@
+const Bem = ({ nome, sobrenome }) => {
+  return <h1>Hello {nome} {sobrenome}!</h1>
+}
+
+const Menu = ({ nome, sobrenome, isLoggeddIn = false , onLogout, onLoging }) => {
+  return (
+  <>
+     <Bem nome={nome} sobrenome={sobrenome} />
+      
+      {
+       isLoggeddIn 
+       ? onLogout && <button onClick={onLogout}>Logout</button> 
+       : onLoging && <button onClick={onLoging}>Login</button>
+      }
+      
+  </>
+  )
+}
+
+const App = () => {
+  const login = () => console.log("login no sitema");
+  const logout = () => console.log("Sida do sitema");
+  
+  return <Menu  nome="Alexandre" sobrenome="Fernandes" 
+           isLoggeddIn={false} 
+           onLoging={login}        
+           onLogout={logout} />
+}
+   
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/index.html">
+        <label for="">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br />
+        <br />
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <br />
+        <br />
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade" min="10" max="99">
+        <br />
+        <br />
+        <label for="telefone">Celular</label>
+        <input type="tel" name="telefone" id="telefone">
+        <br />
+        <br />
+        <label for="genero">Genero</label>
+        <select name="genero" id="genero" required>
+            <option value="">Selecione</option>
+            <optgroup label="Genero">
+                <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="NA">Não informado</option>
+            </optgroup>
+            <optgroup label="estado">
+                <option value="SP">Sao paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espirito Santo</option>
+            </optgroup>
+        </select>
+        <br />
+        <br />
+          
+        <input type="checkbox" name="aceito" id="aceito">
+        <label for="aceito">Sim</label>
+
+        <input type="checkbox" name="naoaceito" id="naoaceito">
+        <label for="naoaceito">Não</label>
+        <br />
+        <br />
+         
+        <input type="radio" id="favorito" name="favorito" value="js">
+        <label for="js">JavaScript</label>
+        <br>
+        <br>
+
+        <input type="submit" value="Enviar">
+
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>

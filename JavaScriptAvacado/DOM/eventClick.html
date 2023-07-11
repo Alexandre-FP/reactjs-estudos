@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao">Clique</button>
+    <a href="https://class.devsamurai.com.br/lectures/1070" id="link">Clique Aqui</a>
+    <script>
+       const bot = document.querySelector("#botao");
+       const a = document.querySelector("#link");
+       
+       bot.addEventListener("click", () => { //capturando e manipulando o envento
+         console.log("Clique");
+       });
+
+       a.addEventListener("click", (e) => {
+        e.preventDefault(); // fazendo um comportamento diferente com o evento
+        console.log("Clique")
+       });
+       
+
+    </script>
+</body>
+</html>
