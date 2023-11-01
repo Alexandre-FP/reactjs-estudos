@@ -1,6 +1,6 @@
 // let set = [1, 2, 3, 4, 5];
 
-// let [n1, n2] = set; 
+// let [n1, n2] = set;
 
 function myfunction(){ // jeito certo de fazer a destruturação
     const x = 10;

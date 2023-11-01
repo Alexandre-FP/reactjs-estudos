@@ -8,12 +8,12 @@ console.log(mult(n));
 
 //---------------
 
-function multObj(obj){ /* diferente das variaveis tipo objetos os valores sao passada como referencia*/  
+function multObj(obj){ /* diferente das variaveis tipo objetos os valores sao passada como referencia*/
  obj.value *= obj.value;
   return obj;
 }
 
-const obj = { 
+const obj = {
     value: 10,
 };
 
